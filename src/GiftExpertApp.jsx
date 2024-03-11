@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
-import { GiftGrid } from './components/GiftGrid';
+import { AddCategory, GiftGrid } from './components';
 
 export const GiftExpertApp = () => {
 
-    const [categories, setCategories] = useState(['software','pc']);
+    const [categories, setCategories] = useState(['Software','Dev']);
 
     const onAddCategory = (onNewCategory) =>{
         if(categories.includes(onNewCategory)) return;

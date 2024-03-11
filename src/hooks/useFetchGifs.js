@@ -4,10 +4,12 @@ import { getGifts } from "../helpers/getGifs";
 
 export const useFetchGifs = ( category ) => {
   const [images, setImages] = useState([]);
+  const [isLoading, setIsloading] = useState( true );
 
   const getImages = async () => {
     const newImages = await getGifts(category);
     setImages(newImages);
+    setIsloading( false );
   };
 
   useEffect(() => {
@@ -16,6 +18,6 @@ export const useFetchGifs = ( category ) => {
 
   return {
     images: images,
-    isLoading: true,
+    isLoading
   };
 };
