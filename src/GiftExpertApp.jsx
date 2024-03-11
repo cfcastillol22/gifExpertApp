@@ -4,7 +4,7 @@ import { GiftGrid } from './components/GiftGrid';
 
 export const GiftExpertApp = () => {
 
-    const [categories, setCategories] = useState(['Dios','Jesus']);
+    const [categories, setCategories] = useState(['software','pc']);
 
     const onAddCategory = (onNewCategory) =>{
         if(categories.includes(onNewCategory)) return;
